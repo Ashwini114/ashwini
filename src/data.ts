@@ -17,7 +17,7 @@ export const intro = {
   greeting: "Ashwini Ravi Nair",
   about:
     `Technical Lead with over ${currentYear-2015} years of experience delivering cross-platform applications for web, mobile and Web TV. I lead Agile teams through collaborative leadership, approach complex problems with innovative thinking, and ensure that technical execution stays precisely aligned with stakeholder objectives.`,
-  platforms: ["web platforms", "mobile apps", "smart TV devices", "Web TV"],
+  platforms: ["web platforms", "mobile apps", "smart TV devices"],
   facts: [
     { value: `${currentYear-2015}+ years`, label: "in software delivery" },
     { value: "3 platforms", label: "web, mobile and TV" },

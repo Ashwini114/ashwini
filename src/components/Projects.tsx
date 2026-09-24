@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <section className="projects" id="projects" aria-labelledby="projects-title">
       <div className="section-head">
-        <h2 id="projects-title">Selected projects</h2>
+        <h2 id="projects-title">Featured Projects</h2>
         <p>These are some of the projects I have worked on.</p>
       </div>
 

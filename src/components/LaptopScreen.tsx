@@ -44,72 +44,7 @@ function ShopSite() {
   );
 }
 
-function EventSite() {
-  const events = [
-    { m: "Mar", d: "14", title: "Product leadership summit", place: "City Arts Hall", fill: 82, tint: "var(--powder)" },
-    { m: "Mar", d: "22", title: "Quarterly partner review", place: "Riverside Hub", fill: 56, tint: "var(--lavender)" },
-    { m: "Apr", d: "03", title: "Annual customer conference", place: "Central Park Lawn", fill: 94, tint: "var(--mint)" },
-  ];
-  return (
-    <div className="ws ws-events">
-      <aside className="ws-side" aria-hidden="true">
-        <b /><i className="on" /><i /><i /><i />
-      </aside>
-      <div className="ws-main">
-        <div className="ws-head">
-          <strong className="ws-title">Upcoming events</strong>
-          <span className="ws-btn">+ New event</span>
-        </div>
-        <div className="ws-stats">
-          <div><b>1,284</b><span>Tickets sold</span></div>
-          <div><b>862</b><span>RSVPs</span></div>
-          <div><b>12</b><span>Venues</span></div>
-        </div>
-        <div className="ws-list">
-          {events.map((e) => (
-            <div className="ws-event" key={e.title}>
-              <div className="ws-date" style={{ background: e.tint }}><span>{e.m}</span><b>{e.d}</b></div>
-              <div className="ws-event-body">
-                <p className="ws-name">{e.title}</p>
-                <p className="ws-muted">{e.place}</p>
-                <div className="ws-bar"><i style={{ width: `${e.fill}%` }} /></div>
-              </div>
-              <div className="ws-faces" aria-hidden="true"><i /><i /><i /></div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
-function TeamSite() {
-  const people = [
-    { init: "AK", name: "Arjun K.", role: "Frontend", skills: ["React", "TS"], status: "Available", tone: "ok" },
-    { init: "MS", name: "Meera S.", role: "QA", skills: ["Automation"], status: "On a task", tone: "busy" },
-    { init: "RJ", name: "Rahul J.", role: "Mobile", skills: ["Ionic", "Android"], status: "Available", tone: "ok" },
-    { init: "NP", name: "Nisha P.", role: "Design", skills: ["UX", "Figma"], status: "On leave", tone: "away" },
-  ];
-  return (
-    <div className="ws ws-team">
-      <div className="ws-head">
-        <strong className="ws-title">Team overview</strong>
-        <div className="ws-chips"><span className="on">Everyone</span><span>Available</span><span>On leave</span></div>
-      </div>
-      <div className="ws-table">
-        {people.map((p) => (
-          <div className="ws-tr" key={p.name}>
-            <span className="ws-avatar">{p.init}</span>
-            <div className="ws-who"><p className="ws-name">{p.name}</p><p className="ws-muted">{p.role}</p></div>
-            <div className="ws-skills">{p.skills.map((s) => <span key={s}>{s}</span>)}</div>
-            <span className={`ws-status ${p.tone}`}>{p.status}</span>
-            <span className={`ws-assign${p.tone === "ok" ? "" : " is-disabled"}`}>Assign</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function LaptopScreen({  compact }: { compact: boolean }) {
   return (

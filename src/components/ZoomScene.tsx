@@ -11,7 +11,7 @@ const TV = { x: 572, y: 176, w: 456, h: 256.5 };
 const SLIDES_END = 0.18;
 const ZOOM_START = 0.2;
 const ZOOM_END = 0.7;
-const TV_ON = 0.72;
+const TV_ON = 0.4;
 
 const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
